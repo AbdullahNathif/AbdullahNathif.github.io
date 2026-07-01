@@ -216,6 +216,28 @@
       max-width: 230px;
     }
 
+    /* Mobile Header */
+    .mobile-header {
+      display: none;
+    }
+
+    .mobile-profile {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .mobile-photo {
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid rgba(56, 189, 248, 0.75);
+      box-shadow: 0 0 22px rgba(56, 189, 248, 0.25);
+      background: #111827;
+      flex-shrink: 0;
+    }
+
     /* Main */
     .main {
       grid-column: 2;
@@ -470,10 +492,6 @@
       max-width: 760px;
     }
 
-    .mobile-header {
-      display: none;
-    }
-
     @media (max-width: 980px) {
       .layout {
         display: block;
@@ -496,6 +514,8 @@
 
       .mobile-header strong {
         display: block;
+        font-size: 17px;
+        line-height: 1.2;
       }
 
       .mobile-header span {
@@ -518,6 +538,23 @@
     }
 
     @media (max-width: 520px) {
+      .mobile-header {
+        padding: 14px 18px;
+      }
+
+      .mobile-photo {
+        width: 52px;
+        height: 52px;
+      }
+
+      .mobile-header strong {
+        font-size: 16px;
+      }
+
+      .mobile-header span {
+        font-size: 12.5px;
+      }
+
       .actions {
         flex-direction: column;
       }
@@ -535,15 +572,20 @@
 
 <body>
   <div class="mobile-header">
-    <strong>Abdullah Nathif</strong>
-    <span>Computer Science Graduate | CCNA Certified</span>
+    <div class="mobile-profile">
+      <img src="profile.jpg?v=3" alt="Abdullah Nathif" class="mobile-photo">
+      <div>
+        <strong>Abdullah Nathif</strong>
+        <span>Computer Science Graduate | CCNA Certified</span>
+      </div>
+    </div>
   </div>
 
   <div class="layout">
     <aside class="sidebar">
       <div class="profile">
         <div class="photo-wrap">
-          <img src="profile.jpg?v=2" alt="Abdullah Nathif" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
+          <img src="profile.jpg?v=3" alt="Abdullah Nathif" onerror="this.style.display='none'; this.parentElement.classList.add('no-photo');">
         </div>
 
         <h1>Abdullah Nathif</h1>
